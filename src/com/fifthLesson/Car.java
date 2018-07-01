@@ -2,12 +2,12 @@ package com.fifthLesson;
 
 public class Car {
 
-    private long id;
+    private Long id;
     private String mark;
     private String model;
-    private int year;
+    private Integer year;
     private String color;
-    private int price; //thousand dollars
+    private Integer price;
     private String regNumber;
 
     private Car(Builder builder) {
@@ -20,7 +20,7 @@ public class Car {
         regNumber = builder.regNumber;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -44,7 +44,7 @@ public class Car {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -56,11 +56,11 @@ public class Car {
         this.color = color;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -74,28 +74,24 @@ public class Car {
 
     public static class Builder {
 
-        private static long countId = 0;
-        private long id;
+        private static Long countId = 0L;
+        private Long id;
         private String mark;
         private String model;
-        private int year;
-        private int price;
+        private Integer year;
+        private Integer price;
         private String color;
         private String regNumber;
 
-
-        public Builder(String mark, String model, int year) {
+        public Builder(String mark, String model, Integer year) {
             this.id = ++countId;
             this.mark = mark;
             this.model = model;
             this.year = year;
+            this.price = 0;
+            this.color = "undefined";
+            this.regNumber = "undefined";
         }
-
-
-//        public Builder id() {
-//            this.id = ++countId;
-//            return this;
-//        }
 
         public Builder mark(String mark) {
             this.mark = mark;
@@ -107,12 +103,12 @@ public class Car {
             return this;
         }
 
-        public Builder year(int year) {
+        public Builder year(Integer year) {
             this.year = year;
             return this;
         }
 
-        public Builder price(int price) {
+        public Builder price(Integer price) {
             this.price = price;
             return this;
         }

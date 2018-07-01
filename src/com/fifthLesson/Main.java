@@ -15,9 +15,9 @@ Car[] cars = new Car[]{
         new Car.Builder("SUBARU","IMPREZA", 2015).price(21000).build(),
         };
         System.out.println(cars.length);
-        System.out.println(ArrayCar.getCarsForMark(cars,"BMW"));
-        System.out.println(ArrayCar.getCarsForModelAndUsedYears(cars,"IMPREZA",6));
-        System.out.println(ArrayCar.getCarsForYearsAndPrice(cars,2008,20000));
+        System.out.println(ArrayCar.getCarsByMark(cars,"BMW"));
+        System.out.println(ArrayCar.getCarsByModelAndUsedYears(cars,"IMPREZA",6));
+        System.out.println(ArrayCar.getCarsByYearsAndPrice(cars,2008,20000));
     }
 
 }
