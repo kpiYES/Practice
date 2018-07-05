@@ -12,7 +12,6 @@ public class Bank {
     }
 
     public static int getYearsWithFor(int sum, int percent, int desiredSum) {
-
         int years;
         for (years = 0; sum < desiredSum; years++) {
             sum += sum * percent / 100;
